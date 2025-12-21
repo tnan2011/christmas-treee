@@ -56,7 +56,6 @@ export default function App() {
   const [isSharedView, setIsSharedView] = useState(false);
   const [twoHandsDetected, setTwoHandsDetected] = useState(false);
   const [closestPhoto, setClosestPhoto] = useState<string | null>(null);
-  const [showTwoFingerMessage, setShowTwoFingerMessage] = useState(false);
 
   // Check for share parameter in URL on mount
   useEffect(() => {
@@ -113,10 +112,6 @@ export default function App() {
     setTwoHandsDetected(detected);
   };
 
-  const handleTwoFingerGesture = (detected: boolean) => {
-    setShowTwoFingerMessage(detected);
-  };
-
   const handleClosestPhotoChange = (photoUrl: string | null) => {
     setClosestPhoto(photoUrl);
   };
@@ -166,7 +161,7 @@ export default function App() {
       )}
       
       {/* Gesture Control Module */}
-      <GestureController currentMode={mode} onModeChange={setMode} onHandPosition={handleHandPosition} onTwoHandsDetected={handleTwoHandsDetected} onTwoFingerGesture={handleTwoFingerGesture} />
+      <GestureController currentMode={mode} onModeChange={setMode} onHandPosition={handleHandPosition} onTwoHandsDetected={handleTwoHandsDetected} />
       
       {/* Photo Overlay - Shows when two hands detected */}
       {closestPhoto && (
@@ -197,16 +192,7 @@ export default function App() {
         </div>
       )}
 
-            {/* Two-finger gesture message */}
-      {showTwoFingerMessage && (
-        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 pointer-events-none">
-          <div className="bg-gradient-to-r from-[#D4AF37] via-[#F5E6BF] to-[#D4AF37] text-black text-5xl md:text-7xl font-bold px-12 py-6 rounded-2xl shadow-2xl border-4 border-white animate-bounce font-serif">
-            HDPE-Ngon luôn ✌️
-          </div>
-        </div>
-      )}
-
-      {/* 🎵 Music Player */}
+            {/* 🎵 Music Player */}
       <MusicPlayer />
 
     </div>
