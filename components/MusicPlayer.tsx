@@ -13,13 +13,13 @@ const playlist: Song[] = [
     title: 'First snow',
     artist: 'D Dũng',
     src: '/music/audio00.mp3',
-    cover: '/photos/image3.jpg',
+    cover: '/photos/image1.jpg',
   },
   {
     title: 'Last Christmas',
     artist: 'Hehe',
     src: '/music/audio6.mp3',
-    cover: '/photos/image2.jpg',
+    cover: '/photos/image1.jpg',
   },
   {
     title: 'Last Christmas',
