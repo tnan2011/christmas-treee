@@ -13,13 +13,13 @@ const playlist: Song[] = [
     title: 'First snow',
     artist: 'D Dũng',
     src: '/music/audio00.mp3',
-    cover: '/photos/image1.jpg',
+    cover: '/photos/image33.jpg',
   },
   {
     title: 'Last Christmas',
     artist: 'Hehe',
     src: '/music/audio6.mp3',
-    cover: '/photos/image1.jpg',
+    cover: '/photos/image22.jpg',
   },
   {
     title: 'Last Christmas',
@@ -33,7 +33,7 @@ export const MusicPlayer: React.FC = () => {
   const audioRef = useRef<HTMLAudioElement>(null);
 
   const [index, setIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
 
   const song = playlist[index];
@@ -148,3 +148,4 @@ export const MusicPlayer: React.FC = () => {
     </div>
   );
 };
+export default MusicPlayer;
