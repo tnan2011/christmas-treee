@@ -217,7 +217,7 @@ export const UIOverlay: React.FC<UIOverlayProps> = ({
         </h1>
       </header>
 
-      <div className="absolute bottom-8 right-8 flex flex-col items-end gap-4 pointer-events-auto">
+      {/* <div className="absolute bottom-8 right-8 flex flex-col items-end gap-4 pointer-events-auto">
         <input
           ref={fileInputRef}
           type="file"
@@ -233,7 +233,7 @@ export const UIOverlay: React.FC<UIOverlayProps> = ({
           </button>
         )}
 
-        {/* {!isSharedView && !hasPhotos && (
+        {!isSharedView && !hasPhotos && (
           <button onClick={handleUploadClick} className="px-6 py-3 border-2 border-[#D4AF37] bg-black/70">
             <span className="text-[#D4AF37]">Thêm ảnh</span>
           </button>
