@@ -48,7 +48,7 @@ Sử dụng phát hiện cử chỉ tay từ hình ảnh camera, bàn tay mở �
    ```
 
 
-
+<!--
 ## 🎯 Usage
 
 ### Photo Upload & Sharing
@@ -67,6 +67,7 @@ Sử dụng phát hiện cử chỉ tay từ hình ảnh camera, bàn tay mở �
    - Photos will automatically load on the Christmas tree
    - No login or app installation required
    - Links expire after 30 days
+-->
 
 ### Gesture Controls
 
