@@ -233,11 +233,11 @@ export const UIOverlay: React.FC<UIOverlayProps> = ({
           </button>
         )}
 
-        {!isSharedView && !hasPhotos && (
+        {/* {!isSharedView && !hasPhotos && (
           <button onClick={handleUploadClick} className="px-6 py-3 border-2 border-[#D4AF37] bg-black/70">
             <span className="text-[#D4AF37]">Thêm ảnh</span>
           </button>
-        )}
+        )} */}
 
         {hasPhotos && !shareLink && (
           <button
