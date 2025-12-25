@@ -227,17 +227,18 @@ export const UIOverlay: React.FC<UIOverlayProps> = ({
           className="hidden"
         />
 
+        {/* 
         {isSharedView && (
           <button onClick={handleCreateMine} className="px-6 py-3 border-2 border-[#D4AF37] bg-black/70">
             <span className="text-[#D4AF37]">Tạo cây thông Noel của tôi</span>
           </button>
         )}
 
-        {/* {!isSharedView && !hasPhotos && (
+        {!isSharedView && !hasPhotos && (
           <button onClick={handleUploadClick} className="px-6 py-3 border-2 border-[#D4AF37] bg-black/70">
             <span className="text-[#D4AF37]">Thêm ảnh</span>
           </button>
-        )} */}
+        )}
 
         {hasPhotos && !shareLink && (
           <button
@@ -271,6 +272,7 @@ export const UIOverlay: React.FC<UIOverlayProps> = ({
             <p className="text-xs text-[#F5E6BF]/50 mt-2">Hết hạn sau 30 ngày</p>
           </div>
         )}
+        */}
       </div>
     </div>
   );
