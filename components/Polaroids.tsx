@@ -217,7 +217,7 @@ export const Polaroids: React.FC<PolaroidsProps> = ({ mode, uploadedPhotos, twoH
 
       data.push({
         id: i,
-        url: `/photos/${i + 1}.jpg`,  // Lấy ảnh từ thư mục public/photos/
+        url: `/photos/${i + 1}.png`,  // Lấy ảnh từ thư mục public/photos/
         chaosPos,
         targetPos,
         speed: 0.8 + Math.random() * 1.5
