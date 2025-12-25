@@ -48,16 +48,16 @@ const PolaroidItem: React.FC<{ data: PhotoData; mode: TreeMode; index: number }>
   useEffect(() => {
     const loader = new THREE.TextureLoader();
     loader.load(
-      data.url,
+      `/photos/${index + 1}.png`, 
       (loadedTex) => {
         loadedTex.colorSpace = THREE.SRGBColorSpace;
         setTexture(loadedTex);
         setError(false);
       },
-      undefined, // onProgress
+      undefined,
       (err) => {
         console.warn(`Failed to load image: ${data.url}`, err);
-        setError(true);
+        setError(true);;
       }
     );
   }, [data.url]);
