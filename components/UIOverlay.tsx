@@ -239,39 +239,35 @@ export const UIOverlay: React.FC<UIOverlayProps> = ({
           </button>
         )} */}
 
-        {hasPhotos && !shareLink && (
-          <button
-            onClick={handleShare}
-            disabled={isSharing}
-            className="px-6 py-3 border-2 border-[#D4AF37] bg-black/70 disabled:opacity-50"
-          >
-            <span className="text-[#D4AF37]">
-              {uploadProgress || (isSharing ? 'Đang tạo...' : 'Chia sẻ')}
-            </span>
-          </button>
-        )}
+{hasPhotos && !shareLink && (
+  <button
+    onClick={handleShare}
+    disabled={isSharing}
+    className="px-6 py-3 border-2 border-[#D4AF37] bg-black/70 disabled:opacity-50"
+  >
+    <span className="text-[#D4AF37]">
+      {uploadProgress || (isSharing ? 'Đang tạo...' : 'Chia sẻ')}
+    </span>
+  </button>
+)}
 
-        {shareError && <p className="text-red-400 text-xs">{shareError}</p>}
+{shareError && <p className="text-red-400 text-xs">{shareError}</p>}
 
-        {shareLink && (
-          <div className="bg-black/80 border-2 border-[#D4AF37] p-4 max-w-sm">
-            <p className="text-[#F5E6BF] text-sm mb-2">Liên kết chia sẻ đã được tạo</p>
-            <div className="flex gap-2">
-              <input
-                value={shareLink}
-                readOnly
-                className="flex-1 bg-black text-[#D4AF37] text-xs px-2"
-              />
-              <button onClick={handleCopyLink}>
-                <span className="text-[#D4AF37] text-xs">
-                  {copied ? '✓ Đã sao chép' : 'Sao chép'}
-                </span>
-              </button>
-            </div>
-            <p className="text-xs text-[#F5E6BF]/50 mt-2">Hết hạn sau 30 ngày</p>
-          </div>
-        )}
-      </div>
+{shareLink && (
+  <div className="bg-black/80 border-2 border-[#D4AF37] p-4 max-w-sm">
+    <p className="text-[#F5E6BF] text-sm mb-2">Liên kết chia sẻ đã được tạo</p>
+    <div className="flex gap-2">
+      <input
+        value={shareLink}
+        readOnly
+        className="flex-1 bg-black text-[#D4AF37] text-xs px-2"
+      />
+      <button onClick={handleCopyLink}>
+        <span className="text-[#D4AF37] text-xs">
+          {copied ? '✓ Đã sao chép' : 'Sao chép'}
+        </span>
+      </button>
     </div>
-  );
-};
+    <p className="text-xs text-[#F5E6BF]/50 mt-2">Hết hạn sau 30 ngày</p>
+  </div>
+)}
