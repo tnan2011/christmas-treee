@@ -11,15 +11,15 @@ interface Song {
 const playlist: Song[] = [
   {
     title: 'First snow',
-    artist: 'D Dũng',
+    artist: 'Thuww',
     src: '/music/audio00.mp3',
-    cover: '/photos/image33.jpg',
+    cover: '/photos/image3.png',
   },
   {
     title: 'Last Christmas',
     artist: 'Hehe',
     src: '/music/audio6.mp3',
-    cover: '/photos/image22.jpg',
+    cover: '/photos/image2.png',
   },
   {
     title: 'Last Christmas',
