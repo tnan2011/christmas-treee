@@ -25,7 +25,7 @@ const playlist: Song[] = [
     title: 'Last Christmas',
     artist: 'Hehe',
     src: '/music/audio.mp3',
-    cover: '/photos/image1.png',
+    cover: '/photos/image4.png',
   },
 ];
 
